@@ -1,40 +1,36 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import Link from "next/link";
-import Date from "../components/date";
+
 import utilStyles from '../styles/utils.module.css'
 
 import { getSortedPostsData } from "../utils/posts";
 
 // 接收从 getStaticProps 返回的数据
-export default function Home({ allPostsData }) {
+export default function Home() {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hey，我是网络专业的大三学生郑书淦</p>
-        <p>目前在学习前端技术栈，对 Vue 及其生态有极大的兴趣</p>
+        前端开发者&nbsp;/&nbsp;大三&nbsp;&nbsp;/&nbsp;福州
       </section>
-
-      {/* 文章列表 */}
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>博客文章</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <p>Hey，我是网络专业的大三学生郑书淦</p>
+      <p>目前在学习 Vue 及其周边生态</p>
+      <p>
+        我喜欢编程、享受代码带来的正反馈、发现新技术，并构建出实用/好用的软件。
+        同时我也是一个科技爱好者，对新科技、新技术也很感兴趣。
+      </p>
+      <p>
+        在课余时间我会在博客上写下一些我在学习时候遇到的坑，以及对某技术的看法。
+        未来也许也会在各个平台上分享。你可以在 <a
+        href="https://space.bilibili.com/99041702/dynamic?spm_id_from=444.41.my-info.face.click">
+        B 站</a>，
+        <a href="https://github.com/zheng-shugan">Github</a> 上找到我。
+      </p>
+      <p>
+        目前正在做一个简历制作的网站，有兴趣的可以关注一下～
+      </p>
     </Layout>
   )
 }

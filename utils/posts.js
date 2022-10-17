@@ -41,7 +41,7 @@ export const getSortedPostsData = () => {
   })
 }
 
-export const getAllPostIds =  () => {
+export const getAllPostIds = () => {
   // 返回一个像这样的数组
   // [
   //   {
