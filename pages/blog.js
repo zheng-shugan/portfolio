@@ -1,12 +1,12 @@
-import Layout, { siteTitle } from '../components/layout'
+import Layout  from '../components/layout'
 import Link from "next/link";
 import Date from "../components/date";
 import utilStyles from '../styles/utils.module.css'
 
 import { getSortedPostsData } from "../utils/posts";
 import Head from "next/head";
-import { blogTitle } from "../components/layout";
 
+const blogTitle = "Mount's Blog"
 // 接收从 getStaticProps 返回的数据
 export default function Home({ allPostsData }) {
   return (
@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
 
       {/* 文章列表 */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>博客文章</h2>
+        <h2 className={utilStyles.headingLg}>博客列表</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
