@@ -13,7 +13,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        前端开发者&nbsp;/&nbsp;大三&nbsp;&nbsp;/&nbsp;福州
+        前端开发&nbsp;/&nbsp;大三&nbsp;&nbsp;/&nbsp;福州
       </section>
       <p>Hey，我是网络专业的大三学生郑书淦</p>
       <p>目前在学习 Vue 及其周边生态</p>
