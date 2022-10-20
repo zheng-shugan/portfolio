@@ -8,7 +8,7 @@ import NavBar from "./NavBar";
 const name = 'Mount Zheng'
 export const siteTitle = 'Mount Zheng'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, blog }) {
   return (
     <>
       <NavBar />
@@ -47,10 +47,17 @@ export default function Layout({ children, home }) {
         </header>
 
         <main>{children}</main>
-        {!home && (
+        {!home && !blog && (
           <div className={styles.backToHome}>
             <Link href="/">
               <a>← 回到主页</a>
+            </Link>
+          </div>
+        )}
+        {!home && blog && (
+          <div className={styles.backToHome}>
+            <Link href="/blog">
+              <a>← 返回</a>
             </Link>
           </div>
         )}

@@ -14,17 +14,27 @@ import hljs from "highlight.js/lib/core";
 // 单独使用js部分
 import javascript from "highlight.js/lib/languages/javascript";
 
+// 注册需要高亮的语言
+const heightLanguage = ["javascript", "cpp", "css", "html", "typescript", "java", "rust", "go"]
+heightLanguage.map((lang) => {
+  hljs.registerLanguage(lang, javascript)
+})
+
 // 文章组件
 export default function Post({ postData }) {
   // 代码高亮
   useEffect(() => {
-    hljs.registerLanguage("jsx", javascript)
-    hljs.highlightAll()
-    hljs.highl
-  })
+    hljs.configure({
+      ignoreUnescapedHTML: true
+    })
+    const codes = document.querySelectorAll('pre code')
+    codes.forEach((el) => {
+      hljs.highlightElement(el)
+    })
+  }, [])
 
   return (
-    <Layout>
+    <Layout blog>
       <Head>
         <title>{postData.title}</title>
       </Head>

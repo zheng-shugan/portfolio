@@ -23,13 +23,13 @@ export default function Home() {
       </p>
       <p>
         在课余时间我会在博客上写下一些我在学习时候遇到的坑，以及对某技术的看法。
-        未来也许也会在各个平台上分享。你可以在 <a
-        href="https://space.bilibili.com/99041702/dynamic?spm_id_from=444.41.my-info.face.click">
-        B 站</a>，
-        <a href="https://github.com/zheng-shugan">Github</a> 上找到我。
+        未来也许也会在各个平台上分享。
       </p>
       <p>
-        目前正在做一个简历制作的网站，有兴趣的可以关注一下～
+        你可以在 <a href="https://space.bilibili.com/99041702" target="_blank" rel="noreferrer">
+        B 站</a>，
+        <a href="https://github.com/zheng-shugan" target="_blank" rel="noreferrer">Github</a> 上找到我。也可以通过邮箱
+        <a href="mailto:zhengshugan@foxmail.com">zhengshugan@foxmail.com</a>来找到我。
       </p>
     </Layout>
   )
