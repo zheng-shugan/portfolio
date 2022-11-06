@@ -26,7 +26,7 @@ const NavBar = () => {
         </Link>
 
         {/* 简历 */}
-        <Link href='/resume'>
+        <Link href='resume.pdf'>
           <span className={styles.icon}>
             简历
           </span>
