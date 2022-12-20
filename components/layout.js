@@ -5,8 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import NavBar from "./NavBar";
 
-const name = 'Mount Zheng'
-export const siteTitle = 'Mount Zheng'
+import { name, siteTitle } from "../utils/constants";
 
 export default function Layout({ children, home, blog }) {
   return (
